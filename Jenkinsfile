@@ -26,6 +26,7 @@ pipeline {
                     image 'node:18-alpine'
                     reuseNode true
                 }
+            }
             steps {
                 sh 'echo "Test stage"'
                 sh 'test -f ./build/index.html && echo "File exists" || echo "File doesnot exist"'
